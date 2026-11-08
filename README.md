@@ -13,3 +13,4 @@ npm run dev     # http://localhost:3000
 - Өгөгдөл localStorage-д автоматаар хадгалагдана.
 - Бүх текст компонентууд дотроо шууд бичигдсэн (тусдаа strings файл байхгүй).
 - Шинэ загвар нэмэх: `components/cv/` дотор компонент үүсгээд `components/cv/index.ts`-д бүртгэнэ.
+# TUKA-CV-Builder

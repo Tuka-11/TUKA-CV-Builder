@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root { 
+    --background: #0a0a0f;
+  --foreground: #f4f4f8;
+  --paragraph: #9ca3af;
+  --green: #4ADE80;
+  --purple: #A855F7;
+  --secondary-bg: #0D0D14;
+  --footer-text: #4B5563;
+  --secondary-purple-background: #161324;
+  --secondary-green-background: #121312;
+  --border: #2b2b2b;
+  color-scheme: dark;
+ }
+/* html, body { background: #07060d; color: #ece9f7; } */
+body { font-family: "Onest", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #2dd4bf; outline-offset: 2px; }
+summary::-webkit-details-marker { display: none; }
+
+/* CV-ийн A4 хуулбар: дэлгэцээс гадна байрлана, PDF болон хэвлэхэд ашиглагдана */
+.cv-export { position: fixed; left: -10000px; top: 0; width: 794px; pointer-events: none; }
+.cv-export, .cv-export * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: #fff !important; }
+  .app-shell { display: none !important; }
+  .cv-export { position: static !important; left: auto !important; width: auto !important; }
+  .cv-export > div { width: 210mm !important; min-height: 296mm !important; }
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paragraph: var(--paragraph);
+  --color-green: var(--green);
+  --color-purple: var(--purple);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-footer-text: var(--footer-text);
+  --color-secondary-purple-background: var(--secondary-purple-background);
+  --color-secondary-green-background: var(--secondary-green-background);
+  --color-border: var(--border);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
